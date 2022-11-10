@@ -1,4 +1,7 @@
 :root {
+  --heading-font-family: "Nanum Gothic", sans-serif;
+  --default-font-family: "Roboto", sans-serif;
+
   --primary-color: #6c63ff;
   --secondary-color: #f5f2fe;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -6,24 +9,26 @@
 
 body {
   margin: 60px auto;
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: var(--heading-font-family);
   font-weight: 500;
   text-align: center;
   margin: 0;
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 600;
 }
 
@@ -33,7 +38,7 @@ h3 {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--default-font-family);
 }
 
 .navigation-links {
@@ -106,6 +111,17 @@ p {
   color: white;
 }
 
+.navbar-nav .nav-link.active {
+  color: var(--primary-color);
+}
+
+.cover {
+  margin-bottom: 100px;
+  padding: 50px 20px 80px 20px;
+
+  background-color: var(--secondary-color);
+}
+
 @media (max-width: 576px) {
   h1 {
     font-size: 40px;
@@ -126,8 +142,8 @@ p {
   .navigation-links a {
     margin: 20px;
     margin-bottom: 30px;
-    font-size: 20px;
-    padding: 20px 20px;
+    font-size: 18px;
+    padding: 12px;
   }
 
   .aboutapp {
